@@ -1,0 +1,6 @@
+{
+  "name": "FUNO5",
+  "description": "Five Tools. One Flow. A premium dark-themed AI Tool Hub with 1000 items and a smart AI assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
