@@ -40,11 +40,13 @@ We collected **1100 best AI tools** from the entire internet and put them in 5 m
 2. Install
 3. BOOM. You have 1100 superpowers.
 
-### 🔥 Coming Soon
-- AI Search
-- Favorites
-- Submit Your Tool
-- Web Version at funo5.com
+## 📥 Download APK
+
+[![Download APK](https://img.shields.io/badge/Download-APK-brightgreen?style=for-the-badge&logo=android)](https://github.com/YOUR_USERNAME/funo5-app/releases/latest/download/app-release.apk)
+
+> Latest Version: v1.0 | Size: ~15MB | Android 6.0+
+
+[📦 All Releases](https://github.com/YOUR_USERNAME/funo5-app/releases)
 
 ---
 
