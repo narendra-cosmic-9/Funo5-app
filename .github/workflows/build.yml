@@ -1,29 +1,42 @@
-name: Build FUNO5 APK
+name: FUNO5 APK Build
+
 on:
   push:
     branches: [ main ]
   workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: "17"
+
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
-      - name: Build APK
+
+      - name: Give permission
+        run: chmod +x gradlew || echo "no gradlew, using gradle"
+
+      - name: Build Debug APK
         run: |
-          if [ -f "./gradlew" ]; then chmod +x ./gradlew && ./gradlew assembleDebug; else gradle assembleDebug; fi
-      - uses: actions/upload-artifact@v4
+          if [ -f "./gradlew" ]; then ./gradlew assembleDebug; else gradle assembleDebug; fi
+
+      - name: Upload APK to Artifacts (Download here)
+        uses: actions/upload-artifact@v4
         with:
-          name: FUNO5-APK
+          name: Funo5-APK-Download
           path: app/build/outputs/apk/debug/app-debug.apk
-      - uses: softprops/action-gh-release@v2
+
+      - name: Create Release with APK
+        uses: softprops/action-gh-release@v2
         with:
           files: app/build/outputs/apk/debug/app-debug.apk
-          tag_name: v1.0-${{ github.run_number }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          tag_name: funo5-v1-${{ github.run_number }}
+           generate_release_notes
+          
