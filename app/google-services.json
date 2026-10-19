@@ -1,0 +1,23 @@
+{
+  "project_info": {
+    "project_number": "1234567890",
+    "project_id": "funo5-dummy",
+    "storage_bucket": "funo5-dummy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1234567890:android:abcd1234",
+        "android_client_info": {
+          "package_name": "com.cosmic.taskflow"
+        }
+      },
+      "api_key": [
+        {
+          "current_key": "dummy_key"
+        }
+      ]
+    }
+  ],
+  "configuration_version": "1"
+}
